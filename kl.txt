@@ -1,0 +1,28 @@
+
+# If u want to view the data in the local system cmd then first you need to run the zookeeper server for that ! (In new terminal !)
+
+# ----->bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+
+# After that you need to start the kafka server also for that you need to use ! (In new terminal !)
+
+# ------>bin\windows\kafka-server-start.bat config\server.properties
+
+#After that you need to view the data from the topic for that you need to use ! (In new terminal !)
+
+# ----->bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic weather-data --from-beginning
+# and remember ti replace the topic name before you run this ! commend in the cmd 
+
+
+
+project data format from the api end point 
+
+
+{"City": "Delhi", "Coordinates": {"Longitude": 77.2167, "Latitude": 28.6667}, "Wind Speed": 1.54, "Max Temperature": 11.05, "Min Temperature": 11.05, "Current Temperature": 11.05, "Pressure": 1019, "Humidity": 87, "Timezone": 19800, "Timestamp": 1706109941}
+{"City": "Chennai", "Coordinates": {"Longitude": 80.2785, "Latitude": 13.0878}, "Wind Speed": 2.06, "Max Temperature": 26.99, "Min Temperature": 26.99, "Current Temperature": 26.99, "Pressure": 1014, "Humidity": 74, "Timezone": 19800, "Timestamp": 1706109941}
+{"City": "Hyderabad", "Coordinates": {"Longitude": 78.4744, "Latitude": 17.3753}, "Wind Speed": 3.09, "Max Temperature": 25.73, "Min Temperature": 25.23, "Current Temperature": 25.23, "Pressure": 1017, "Humidity": 69, "Timezone": 19800, "Timestamp": 1706109941}
+{"City": "Kolkata", "Coordinates": {"Longitude": 88.3697, "Latitude": 22.5697}, "Wind Speed": 1.54, "Max Temperature": 16.97, "Min Temperature": 16.97, "Current Temperature": 16.97, "Pressure": 1018, "Humidity": 88, "Timezone": 19800, "Timestamp": 1706109941}
+{"City": "Bengaluru", "Coordinates": {"Longitude": 77.6033, "Latitude": 12.9762}, "Wind Speed": 3.09, "Max Temperature": 26.79, "Min Temperature": 24.9, "Current Temperature": 26.37, "Pressure": 1018, "Humidity": 51, "Timezone": 19800, "Timestamp": 1706109941}
+
+
+
+In this i am using the asyncio to run the code asynchronousle so that is why i am getting all the citys data paralley but in action it is running one after an other only but it look's like parallel api calling !
