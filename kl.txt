@@ -26,3 +26,9 @@ project data format from the api end point
 
 
 In this i am using the asyncio to run the code asynchronousle so that is why i am getting all the citys data paralley but in action it is running one after an other only but it look's like parallel api calling !
+
+
+
+
+
+mongodb+srv://Vinay:<password>@cluster0.dnbkemf.mongodb.net/?retryWrites=true&w=majority
